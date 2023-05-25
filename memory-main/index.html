@@ -1,83 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@400;700&display=swap"
-          rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="stylesheet" href="./styles/root.css">
-    <link rel="stylesheet" href="./styles/start-mode-styles.css">
-    <link rel="stylesheet" href="./styles/game-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/root.css" />
+    <link rel="stylesheet" href="./styles/start-mode-styles.css" />
+    <link rel="stylesheet" href="./styles/game-styles.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
 
     <title>Frontend Mentor | Memory game</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Game setup start -->
 
-<!-- Game setup start -->
-
-<main>
-
-    <div class='start-mode'>
+    <main>
+      <div class="start-mode">
         <h2 class="start-mode__title">Memory</h2>
-        <div class='start-mode__modal'>
-            <div>
-                <h3>Font</h3>
-                <div class="start-mode__modal-button-box">
-                    <button class="start-mode__option-button active" value="Atkinson Hyperlegible" data-font="font">
-                        Atkinson Hyperlegible
-                    </button>
-                    <button class="start-mode__option-button" value="Nunito" data-font="font">Nunito</button>
-                </div>
+        <div class="start-mode__modal">
+          <div>
+            <h3>Font</h3>
+            <div class="start-mode__modal-button-box">
+              <button
+                class="start-mode__option-button active"
+                value="Atkinson Hyperlegible"
+                data-font="font"
+              >
+                Atkinson Hyperlegible
+              </button>
+              <button
+                class="start-mode__option-button"
+                value="Nunito"
+                data-font="font"
+              >
+                Nunito
+              </button>
             </div>
-            <div>
-                <h3>Time Limit</h3>
-                <div class="start-mode__modal-button-box">
-                    <button data-players="limit" value="1" class="start-mode__option-button active">01:00</button>
-                    <button data-players="limit" value="2" class="start-mode__option-button">02:00</button>
-                    <button data-players="limit" value="3" class="start-mode__option-button">03:00</button>
-                    <button data-players="limit" value="4" class="start-mode__option-button">04:00</button>
-                </div>
+          </div>
+          <div>
+            <h3>Time Limit</h3>
+            <div class="start-mode__modal-button-box">
+              <button
+                data-players="limit"
+                value="1"
+                class="start-mode__option-button active"
+              >
+                01:00
+              </button>
+              <button
+                data-players="limit"
+                value="2"
+                class="start-mode__option-button"
+              >
+                02:00
+              </button>
+              <button
+                data-players="limit"
+                value="3"
+                class="start-mode__option-button"
+              >
+                03:00
+              </button>
+              <button
+                data-players="limit"
+                value="4"
+                class="start-mode__option-button"
+              >
+                04:00
+              </button>
             </div>
-            <div>
-                <h3>Grid Size</h3>
-                <div class="start-mode__modal-button-box">
-                    <button value="4" data-grid="grid" class="start-mode__option-button active">4x4</button>
-                    <button value="6" data-grid="grid" class="start-mode__option-button">6x6</button>
-                </div>
+          </div>
+          <div>
+            <h3>Grid Size</h3>
+            <div class="start-mode__modal-button-box">
+              <button
+                value="4"
+                data-grid="grid"
+                class="start-mode__option-button active"
+              >
+                4x4
+              </button>
+              <button
+                value="6"
+                data-grid="grid"
+                class="start-mode__option-button"
+              >
+                6x6
+              </button>
             </div>
-            <button class="start-mode__modal-button-start">Start Game</button>
+          </div>
+          <button class="start-mode__modal-button-start">Start Game</button>
         </div>
-    </div>
+      </div>
 
-    <div class="game">
+      <div class="game">
         <h2 class="game__title">memory</h2>
 
         <!--*** board ***-->
-        <div class="game__grid-items">
-
-        </div>
-
+        <div class="game__grid-items"></div>
 
         <div class="game__record">
-            <div class="game__record-box">
-                <span class="game__record-title">Time</span>
-                <span class="game__record-value timer">1:00</span>
-            </div>
-            <div class="game__record-box">
-                <span class="game__record-title">Moves</span>
-                <span class="game__record-value moves">0</span>
-            </div>
+          <div class="game__record-box">
+            <span class="game__record-title">Time</span>
+            <span class="game__record-value timer">1:00</span>
+          </div>
+          <div class="game__record-box">
+            <span class="game__record-title">Moves</span>
+            <span class="game__record-value moves">0</span>
+          </div>
         </div>
-    </div>
 
+        <button class="bnt--open-modal" id="open-modal">Open modal</button>
+        <div class="modal" id="modal">
+          <div class="modal__content">
+            <button class="btn--close-modal" id="close-modal">
+              <svg
+                class="cross-icon"
+                viewBox="0 0 1024 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M810.65984 170.65984q18.3296 0 30.49472 12.16512t12.16512 30.49472q0 18.00192-12.32896 30.33088l-268.67712 268.32896 268.67712 268.32896q12.32896 12.32896 12.32896 30.33088 0 18.3296-12.16512 30.49472t-30.49472 12.16512q-18.00192 0-30.33088-12.32896l-268.32896-268.67712-268.32896 268.67712q-12.32896 12.32896-30.33088 12.32896-18.3296 0-30.49472-12.16512t-12.16512-30.49472q0-18.00192 12.32896-30.33088l268.67712-268.32896-268.67712-268.32896q-12.32896-12.32896-12.32896-30.33088 0-18.3296 12.16512-30.49472t30.49472-12.16512q18.00192 0 30.33088 12.32896l268.32896 268.67712 268.32896-268.67712q12.32896-12.32896 30.33088-12.32896z"
+                />
+              </svg>
+            </button>
+            <h2 class="modal__title">You did it!</h2>
+            <p class="modal__subtitle">Game over! Here's how you go on...</p>
+            <div class="modal__item-wrap">
+              <p class="modal_description">Time Elapsed</p>
+              <p class="modal__number">1:53</p>
+            </div>
+            <div class="modal__item-wrap">
+              <p class="modal__description">Moves Taken</p>
+              <p class="modal__number">39 Moves</p>
+            </div>
+            <div class="button-wrap">
+              <button class="button__modal button__modal-restart">
+                Restart
+              </button>
+              <button class="button__modal button__modal-setup">
+                Setup New Game
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-</main>
-
-<script src="game/memory-game.js"></script>
-
-</body>
+    <script src="game/memory-game.js"></script>
+    <script src="game/modal.js"></script>
+  </body>
 </html>

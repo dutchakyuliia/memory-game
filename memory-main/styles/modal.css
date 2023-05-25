@@ -1,0 +1,130 @@
+
+.visible{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.bnt--open-modal {
+    padding: 20px 20px;
+}
+.modal {
+    display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 200px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.btn--close-modal {
+    background-color: transparent;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+.cross-icon{
+    width: 35px;
+    height: 35px;
+    fill: var(--dark);
+}
+.modal__content {
+    max-width: 654px;
+    position: relative;
+        background-color: var(--gray);
+        margin: auto;
+        padding: 56px 56px;
+        border: 1px solid #888;
+        border-radius: 20px;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s
+}
+@keyframes animatetop {
+    from {
+        transform: scale(0.1);
+        opacity: 0
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.modal__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.25;
+        text-align: center;
+        color: var(--dark);
+        margin-bottom: 15px;
+}
+
+.modal__subtitle {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: var(--blue-lighter);
+        margin-bottom: 40px;
+}
+
+.modal__item-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-lighter);
+    border-radius: 10px;
+    padding: 27px 20px;
+}
+.modal__item-wrap:not(:last-child){
+    margin-bottom: 16px;
+}
+.modal__description {
+    font-weight: 700;
+        font-size: 18px;
+        line-height: 1.22;
+    color: var(--blue-lighter);
+}
+
+.modal__number {
+    font-weight: 700;
+        font-size: 32px;
+        line-height: 1.25;
+        color: var(--dark-light);
+}
+
+.button-wrap {
+    margin-top: 40px;
+}
+.button__modal{
+    min-width: 265px;
+    font-weight: 700;
+        font-size: 20px;
+        line-height: 1.25;
+        text-align: center;
+        padding: 15px 15px;
+        border-radius: 26px;
+        transition: background-color 300ms ease-in-out;
+        cursor: pointer;
+}
+
+.button__modal-restart {
+background-color: var(--orange);
+    color: var(--white);
+}
+.button__modal-restart:hover {
+background-color: rgb(236, 155, 25);
+}
+.button__modal-setup{
+border: 3px var(--dark-lighter) solid;
+}
+.button__modal-setup:hover{
+background-color: rgb(233, 233, 233);
+}
