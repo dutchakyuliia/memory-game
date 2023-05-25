@@ -1,0 +1,84 @@
+.start-mode {
+    position: absolute;
+    inset: 0;
+    background: var(--dark);
+    display: grid;
+    place-content: center;
+
+    /*display: none;*/
+}
+
+.start-mode__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--white);
+    text-align: center;
+}
+
+.start-mode__modal {
+    margin-top: 45px;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 24px;
+    width: calc(100vw - 32px);
+    max-width: 500px;
+    min-width: 327px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.start-mode__modal h3 {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    color: var(--blue-lighter);
+}
+
+.start-mode__modal-button-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 11px;
+}
+
+.start-mode__option-button {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--white);
+    background: var(--dark-lighter);
+    border-radius: 26px;
+    padding-block: 10px;
+    flex: 1;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease-in-out;
+}
+
+.start-mode__option-button:hover {
+    background: var(--blue-light);
+}
+
+input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.start-mode__option-button.active {
+    background: var(--dark);
+}
+
+.start-mode__modal-button-start {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    padding-block: 12px;
+    background: var(--orange);
+    border-radius: 26px;
+    cursor: pointer;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/root.css">
+    <link rel="stylesheet" href="./styles/start-mode-styles.css">
+    <link rel="stylesheet" href="./styles/game-styles.css">
+
+    <title>Frontend Mentor | Memory game</title>
+</head>
+<body>
+
+<!-- Game setup start -->
+
+<main>
+
+    <div class='start-mode'>
+        <h2 class="start-mode__title">Memory</h2>
+        <div class='start-mode__modal'>
+            <div>
+                <h3>Font</h3>
+                <div class="start-mode__modal-button-box">
+                    <button class="start-mode__option-button active" value="Atkinson Hyperlegible" data-font="font">
+                        Atkinson Hyperlegible
+                    </button>
+                    <button class="start-mode__option-button" value="Nunito" data-font="font">Nunito</button>
+                </div>
+            </div>
+            <div>
+                <h3>Time Limit</h3>
+                <div class="start-mode__modal-button-box">
+                    <button data-players="limit" value="1" class="start-mode__option-button active">01:00</button>
+                    <button data-players="limit" value="2" class="start-mode__option-button">02:00</button>
+                    <button data-players="limit" value="3" class="start-mode__option-button">03:00</button>
+                    <button data-players="limit" value="4" class="start-mode__option-button">04:00</button>
+                </div>
+            </div>
+            <div>
+                <h3>Grid Size</h3>
+                <div class="start-mode__modal-button-box">
+                    <button value="4" data-grid="grid" class="start-mode__option-button active">4x4</button>
+                    <button value="6" data-grid="grid" class="start-mode__option-button">6x6</button>
+                </div>
+            </div>
+            <button class="start-mode__modal-button-start">Start Game</button>
+        </div>
+    </div>
+
+    <div class="game">
+        <h2 class="game__title">memory</h2>
+
+        <!--*** board ***-->
+        <div class="game__grid-items">
+
+        </div>
+
+
+        <div class="game__record">
+            <div class="game__record-box">
+                <span class="game__record-title">Time</span>
+                <span class="game__record-value timer">1:00</span>
+            </div>
+            <div class="game__record-box">
+                <span class="game__record-title">Moves</span>
+                <span class="game__record-value moves">0</span>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<script src="game/memory-game.js"></script>
+
+</body>
+</html>

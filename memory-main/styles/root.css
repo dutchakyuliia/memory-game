@@ -1,0 +1,24 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    --font: "Atkinson Hyperlegible";
+    font-family: var(--font), sans-serif;
+}
+
+:root {
+    --orange: rgb(253, 162, 20);
+    --dark: rgb(21, 41, 56);
+    --dark-light: rgb(48, 72, 89);
+    --dark-lighter: rgb(188, 206, 217);
+    --blue-light: rgb(99, 149, 184);
+    --blue-lighter: rgb(113, 145, 165);
+    --white: rgb(252, 252, 252);
+    --gray: rgb(242, 242, 242);
+    --gray-light: rgb(223, 231, 236);
+}
+
+html, body, main {
+    height: 100%;
+}
