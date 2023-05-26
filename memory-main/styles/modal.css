@@ -1,15 +1,11 @@
 
-.visible{
-    display: block;
-}
-.hide{
+.is-hidden{
     display: none;
 }
 .bnt--open-modal {
     padding: 20px 20px;
 }
 .modal {
-    display: none;
         position: fixed;
         z-index: 1;
         padding-top: 200px;
